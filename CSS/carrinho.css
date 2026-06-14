@@ -1,6 +1,4 @@
-/* ============================================================
-   VARIÁVEIS E RESET
-   ============================================================ */
+
 :root {
   --background: #fbf9f8;
   --on-surface: #1b1c1c;
@@ -43,135 +41,6 @@ button {
   font-family: 'Manrope', sans-serif;
 }
 
-
-/* ============================================================
-   NAVBAR
-   ============================================================ */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 50;
-  background-color: rgba(251, 249, 248, 0.95);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1.25rem;
-  height: 56px;
-  border-bottom: 1px solid var(--surface-container-high);
-}
-
-.logo {
-  font-size: 1.35rem;
-  font-weight: bold;
-  color: var(--primary);
-}
-
-/* Nav links — ocultas no mobile, visíveis a partir do tablet */
-.nav-links {
-  display: none;
-  gap: 2rem;
-  list-style: none;
-}
-
-.nav-links a {
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: rgba(27, 28, 28, 0.6);
-  position: relative;
-  transition: color 0.2s;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 1px;
-  background: var(--primary);
-  transition: width 0.3s;
-}
-
-.nav-links a:hover {
-  color: var(--primary);
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* Ícones do nav */
-.nav-icons {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.nav-icons a {
-  color: var(--primary);
-  font-size: 1.25rem;
-  display: flex;
-  align-items: center;
-}
-
-/* Botão hambúrguer — visível apenas no mobile */
-.nav-hamburger {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.nav-hamburger span {
-  width: 22px;
-  height: 2px;
-  background: var(--on-surface-variant);
-  border-radius: 2px;
-  display: block;
-  transition: 0.3s;
-}
-
-/* Menu mobile aberto */
-.nav-mobile-menu {
-  display: none;
-  position: fixed;
-  top: 56px;
-  left: 0;
-  width: 100%;
-  background: var(--background);
-  border-bottom: 1px solid var(--surface-container-high);
-  padding: 1rem 1.25rem 1.5rem;
-  z-index: 49;
-  flex-direction: column;
-  gap: 0;
-}
-
-.nav-mobile-menu.open {
-  display: flex;
-}
-
-.nav-mobile-menu a {
-  padding: 0.875rem 0;
-  font-size: 0.9375rem;
-  color: var(--on-surface-variant);
-  border-bottom: 1px solid var(--surface-container-high);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-.nav-mobile-menu a:last-child {
-  border-bottom: none;
-}
-
-
-/* ============================================================
-   BREAKPOINTS DA NAVBAR
-   ============================================================ */
-
 /* Tablet (768px+): exibe links, oculta hambúrguer */
 @media (min-width: 768px) {
   .navbar {
@@ -204,10 +73,6 @@ button {
   }
 }
 
-
-/* ============================================================
-   MAIN / LAYOUT GERAL
-   ============================================================ */
 main {
   padding-top: 5rem; /* compensa altura da navbar no mobile */
   padding-bottom: 3rem;
@@ -352,10 +217,6 @@ main {
   font-weight: bold;
 }
 
-
-/* ============================================================
-   ÁREA DE CONTEÚDO
-   ============================================================ */
 .account-content h2 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
@@ -371,10 +232,6 @@ main {
   }
 }
 
-
-/* ============================================================
-   WRAPPER DO CARRINHO (itens + resumo)
-   ============================================================ */
 .cart-wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -469,6 +326,48 @@ main {
   align-items: center;
   justify-content: space-between;
   grid-column: 2;
+}
+.footer {
+  background-color: var(--surface-container-low);
+  padding: 2.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.footer-brand h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  color: #526048;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: #777;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links h3 {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: #666;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #526048;
 }
 
 /* Tablet+ : grid de 4 colunas */
@@ -604,10 +503,6 @@ main {
   }
 }
 
-
-/* ============================================================
-   BOTÃO PRINCIPAL
-   ============================================================ */
 .btn-primary {
   display: block;
   padding: 0.9375rem 1rem;
@@ -640,16 +535,9 @@ main {
 }
 
 
-/* ============================================================
-   RODAPÉ
-   ============================================================ */
-.footer {
-  background-color: var(--surface-container-low);
-  padding: 2.5rem 1.25rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
+
+
+
 
 @media (min-width: 640px) {
   .footer {
@@ -665,13 +553,6 @@ main {
     padding: 3rem 3rem;
   }
 }
-
-
-/* ============================================================
-   UTILITÁRIOS
-   ============================================================ */
-
-/* Esconde visualmente mas mantém para leitores de tela */
 .sr-only {
   position: absolute;
   width: 1px;
