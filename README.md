@@ -119,3 +119,33 @@ Experiência do Usuário (UX).
 Equipe
 
 Projeto desenvolvido como parte das atividades acadêmicas, com o objetivo de construir uma plataforma de e-commerce moderna, escalável e alinhada aos princípios de sustentabilidade e inovação.
+## Arquitetura da WalkWord
+
+```mermaid
+flowchart LR
+
+A[Usuário]
+
+A --> B[HTML5]
+
+B --> C[CSS3]
+
+B --> D[JavaScript Frontend]
+
+D --> E[Backend JavaScript]
+
+E --> F[(MySQL)]
+
+F --> G[Usuários]
+F --> H[Produtos]
+F --> I[Pedidos]
+
+E --> J[Sistema de Recomendações]
+
+E --> K[Chart.js]
+
+J --> D
+K --> D
+
+D --> B
+```
